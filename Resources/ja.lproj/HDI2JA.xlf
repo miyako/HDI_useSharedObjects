@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+	<file datatype="plaintext" original="Sources" source-language="en" target-language="ja">
+		<body>
+		<trans-unit id="HDI2_GroupBoxInventory" resname="HDI2_GroupBoxInventory">
+			<source>FYI : Copy of Inventory</source>
+			<target>参考 : Inventoryのコピー</target>
+		</trans-unit>
+		<trans-unit id="HDI2_BtnLaunchInventory" resname="HDI2_BtnLaunchInventory">
+			<source>Launch inventory</source>
+			<target>Inventoryを実行</target>
+		</trans-unit>
+		<trans-unit id="HDI2_TraceTheCode" resname="HDI2_TraceTheCode">
+			<source>Trace the code</source>
+			<target>コードをトレース</target>
+		</trans-unit>
+		<trans-unit id="HDI2_GroupBoxStorage" resname="HDI2_GroupBoxStorage">
+			<source>FYI : Copy of storage</source>
+			<target>参考 : Storageのコピー</target>
+		</trans-unit>
+		<trans-unit id="HDI2_BtnAlpha" resname="HDI2_BtnAlpha">
+			<source>Get seq. number  for Alpha</source>
+			<target>Alphaの連番を取得</target>
+		</trans-unit>
+		<trans-unit id="HDI2_BtnBravo" resname="HDI2_BtnBravo">
+			<source>Get seq. number  for Bravo</source>
+			<target>Bravoの連番を取得</target>
+		</trans-unit>
+		<trans-unit id="HDI2_BtnCharlie" resname="HDI2_BtnCharlie">
+			<source>Get seq. number  for Charlie</source>
+			<target>Charlieの連番を取得</target>
+		</trans-unit>
+		<trans-unit id="HDI2_BtnWhom" resname="HDI2_BtnWhom">
+			<source>Get seq. number for…</source>
+			<target>連番を取得…</target>
+		</trans-unit>
+		<trans-unit id="HDI2_ClickButtons" resname="HDI2_ClickButtons">
+			<source>Click on the buttons&#13;to see Storage in action! </source>
+			<target>ボタンをクリックして&#13;Storageの動作を確認してください！ </target>
+		</trans-unit>
+		</body>
+	</file>
+</xliff>

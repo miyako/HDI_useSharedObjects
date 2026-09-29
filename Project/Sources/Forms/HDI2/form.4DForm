@@ -1,0 +1,491 @@
+{
+	"destination": "detailScreen",
+	"windowMinWidth": 1120,
+	"windowMinHeight": 720,
+	"width": 1120,
+	"height": 720,
+	"menuBar": "Menu Bar #1",
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onTimer",
+		"onAfterKeystroke",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "A4",
+		"paperWidth": "842pt",
+		"paperHeight": "595pt"
+	},
+	"pages": [
+		{
+			"objects": {
+				"Picture1": {
+					"type": "picture",
+					"top": 30,
+					"left": 20,
+					"width": 1080,
+					"height": 670,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"pictureFormat": "scaled",
+					"picture": "/RESOURCES/Images/Background.png"
+				},
+				"TabControl": {
+					"type": "tab",
+					"top": 20,
+					"left": 20,
+					"width": 1080,
+					"height": 680,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"dataSource": "TabControl",
+					"dataSourceTypeHint": "arrayText",
+					"action": "GotoPage",
+					"events": [
+						"onClick"
+					]
+				}
+			}
+		},
+		{
+			"objects": {
+				"Var": {
+					"type": "input",
+					"top": 80,
+					"left": 60,
+					"width": 1000,
+					"height": 600,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"dataSource": "[SAMPLES:4]Tutorial:3",
+					"stroke": "automatic",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"styledText": true,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				}
+			}
+		},
+		{
+			"objects": {
+				"Var1": {
+					"type": "input",
+					"top": 80,
+					"left": 60,
+					"width": 1000,
+					"height": 600,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"dataSource": "[SAMPLES:4]Tutorial:3",
+					"stroke": "automatic",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"styledText": true,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				}
+			}
+		},
+		{
+			"objects": {
+				"Group Box1": {
+					"type": "groupBox",
+					"top": 188,
+					"left": 780,
+					"width": 300,
+					"height": 462,
+					"sizingX": "move",
+					"sizingY": "grow",
+					"stroke": "automatic",
+					"text": ":xliff:HDI2_GroupBoxInventory"
+				},
+				"Button": {
+					"type": "button",
+					"top": 148,
+					"left": 835,
+					"width": 186,
+					"sizingX": "move",
+					"text": ":xliff:HDI2_BtnLaunchInventory",
+					"class": "default",
+					"focusable": false,
+					"method": "ObjectMethods/Button.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable1": {
+					"type": "input",
+					"top": 83,
+					"left": 784,
+					"width": 289,
+					"height": 33,
+					"sizingX": "move",
+					"dataSource": "items",
+					"stroke": "automatic",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Var2": {
+					"type": "input",
+					"top": 80,
+					"left": 40,
+					"width": 710,
+					"height": 600,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"dataSource": "[SAMPLES:4]Tutorial:3",
+					"stroke": "automatic",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"styledText": true,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Variable10": {
+					"type": "input",
+					"top": 220,
+					"left": 800,
+					"width": 260,
+					"height": 410,
+					"sizingX": "move",
+					"sizingY": "grow",
+					"dataSource": "result",
+					"stroke": "automatic",
+					"fontWeight": "bold",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Check Box": {
+					"type": "checkbox",
+					"top": 670,
+					"left": 784,
+					"width": 280,
+					"height": 20,
+					"sizingX": "move",
+					"sizingY": "move",
+					"dataSource": "btnTrace",
+					"stroke": "automatic",
+					"text": ":xliff:HDI2_TraceTheCode",
+					"focusable": false,
+					"events": [
+						"onClick"
+					]
+				}
+			}
+		},
+		{
+			"objects": {
+				"Var3": {
+					"type": "input",
+					"top": 80,
+					"left": 60,
+					"width": 1000,
+					"height": 600,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"dataSource": "[SAMPLES:4]Tutorial:3",
+					"stroke": "automatic",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"styledText": true,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				}
+			}
+		},
+		{
+			"objects": {
+				"Group Box": {
+					"type": "groupBox",
+					"top": 260,
+					"left": 740,
+					"width": 340,
+					"height": 390,
+					"sizingX": "move",
+					"sizingY": "grow",
+					"stroke": "automatic",
+					"text": ":xliff:HDI2_GroupBoxStorage"
+				},
+				"Var4": {
+					"type": "input",
+					"top": 80,
+					"left": 40,
+					"width": 660,
+					"height": 597,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"dataSource": "[SAMPLES:4]Tutorial:3",
+					"stroke": "automatic",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"styledText": true,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Button1": {
+					"type": "button",
+					"top": 131,
+					"left": 740,
+					"width": 250,
+					"sizingX": "move",
+					"text": ":xliff:HDI2_BtnAlpha",
+					"class": "default",
+					"focusable": false,
+					"method": "ObjectMethods/Button1.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable2": {
+					"type": "input",
+					"top": 133,
+					"left": 1002,
+					"width": 76,
+					"height": 17,
+					"sizingX": "move",
+					"dataSource": "ID1",
+					"dataSourceTypeHint": "number",
+					"stroke": "automatic",
+					"textAlign": "center",
+					"fontWeight": "bold",
+					"focusable": false,
+					"enterable": false,
+					"contextMenu": "none",
+					"numberFormat": "###,##0;;",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Button2": {
+					"type": "button",
+					"top": 161,
+					"left": 740,
+					"width": 250,
+					"sizingX": "move",
+					"text": ":xliff:HDI2_BtnBravo",
+					"class": "default",
+					"focusable": false,
+					"method": "ObjectMethods/Button2.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable3": {
+					"type": "input",
+					"top": 163,
+					"left": 1002,
+					"width": 76,
+					"height": 17,
+					"sizingX": "move",
+					"dataSource": "ID2",
+					"dataSourceTypeHint": "number",
+					"stroke": "automatic",
+					"textAlign": "center",
+					"fontWeight": "bold",
+					"focusable": false,
+					"enterable": false,
+					"contextMenu": "none",
+					"numberFormat": "###,##0;;",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Button3": {
+					"type": "button",
+					"top": 191,
+					"left": 740,
+					"width": 250,
+					"sizingX": "move",
+					"text": ":xliff:HDI2_BtnCharlie",
+					"class": "default",
+					"focusable": false,
+					"method": "ObjectMethods/Button3.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable4": {
+					"type": "input",
+					"top": 193,
+					"left": 1002,
+					"width": 76,
+					"height": 17,
+					"sizingX": "move",
+					"dataSource": "ID3",
+					"dataSourceTypeHint": "number",
+					"stroke": "automatic",
+					"textAlign": "center",
+					"fontWeight": "bold",
+					"focusable": false,
+					"enterable": false,
+					"contextMenu": "none",
+					"numberFormat": "###,##0;;",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Variable7": {
+					"type": "input",
+					"top": 280,
+					"left": 760,
+					"width": 300,
+					"height": 360,
+					"sizingX": "move",
+					"sizingY": "grow",
+					"dataSource": "CopyOfStorage",
+					"stroke": "automatic",
+					"fontWeight": "bold",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Button6": {
+					"type": "button",
+					"top": 221,
+					"left": 740,
+					"width": 180,
+					"sizingX": "move",
+					"text": ":xliff:HDI2_BtnWhom",
+					"class": "default",
+					"focusable": false,
+					"method": "ObjectMethods/Button6.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable8": {
+					"type": "input",
+					"top": 223,
+					"left": 1002,
+					"width": 76,
+					"height": 17,
+					"sizingX": "move",
+					"dataSource": "ID4",
+					"dataSourceTypeHint": "number",
+					"stroke": "automatic",
+					"textAlign": "center",
+					"fontWeight": "bold",
+					"focusable": false,
+					"enterable": false,
+					"contextMenu": "none",
+					"numberFormat": "###,##0;;",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Variable9": {
+					"type": "input",
+					"top": 222,
+					"left": 930,
+					"width": 60,
+					"height": 17,
+					"sizingX": "move",
+					"dataSource": "whom",
+					"stroke": "automatic",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Text": {
+					"type": "text",
+					"top": 69,
+					"left": 798,
+					"width": 270,
+					"height": 47,
+					"sizingX": "move",
+					"stroke": "automatic",
+					"textAlign": "center",
+					"fontWeight": "bold",
+					"text": ":xliff:HDI2_ClickButtons"
+				},
+				"Check Box1": {
+					"type": "checkbox",
+					"top": 670,
+					"left": 740,
+					"width": 340,
+					"height": 20,
+					"sizingX": "move",
+					"sizingY": "move",
+					"dataSource": "btnTrace",
+					"stroke": "automatic",
+					"text": ":xliff:HDI2_TraceTheCode",
+					"focusable": false,
+					"events": [
+						"onClick"
+					]
+				}
+			}
+		}
+	]
+}

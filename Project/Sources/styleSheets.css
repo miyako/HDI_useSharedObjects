@@ -1,0 +1,25 @@
+/* hdi-panel-bg: the light grey background panel on the HDI splash screen */
+@media (prefers-color-scheme: light) {
+	.hdi-panel-bg {
+		fill: #C0C0C0;
+	}
+}
+
+@media (prefers-color-scheme: dark) {
+	.hdi-panel-bg {
+		fill: #3A3A3A;
+	}
+}
+
+/* hdi-link: the clickable blog URL on the HDI splash screen */
+@media (prefers-color-scheme: light) {
+	.hdi-link {
+		stroke: #1E90FF;
+	}
+}
+
+@media (prefers-color-scheme: dark) {
+	.hdi-link {
+		stroke: #5CB8FF;
+	}
+}
