@@ -1,9 +1,10 @@
 ![version](https://img.shields.io/badge/version-16R6%2B-E23089)
 ![platform](https://img.shields.io/static/v1?label=platform&message=mac-intel%20|%20mac-arm%20|%20win-64&color=blue)
+![compatibility](https://img.shields.io/badge/compatibility-4D%2021.1%2B-1E90FF)
 
 # HDI_useSharedObjects
 
-Sharing state safely across 4D processes with the built-in `Storage` shared object -- atomic counters, fire-and-forget worker processes, and a read-only snapshot of a live shared object for display. Originally published by 4D as a **HDI** (*How Do I*) example for **4D v16 R6**; converted from the binary `.4DB` to the `.4DProject` architecture so it runs on current 4D releases.
+Sharing state safely across 4D processes with the built-in `Storage` shared object -- atomic counters, fire-and-forget worker processes, and a read-only snapshot of a live shared object for display. Originally published by 4D as a **HDI** (*How Do I*) example for **4D v16 R6**; converted from the binary `.4DB` to the `.4DProject` architecture so it runs on current 4D releases, and further modernized (see [Modernization](#modernization) below) to current `4D 21.1` language and UI conventions.
 
 ## Origin
 
@@ -42,11 +43,28 @@ This project started as a binary `.4DB` example database originally distributed 
 
 ```
 Project/Sources/
-  Forms/HDI/     Splash/startup form
-  Forms/HDI2/     Main demo form: sequential ID buttons + concurrent inventory count
-  Methods/        Storage/shared-object logic (GetNextID, Inventory, HowMany, DisplayResult) and startup (00_Start)
-Resources/        Application resources (tips, images)
+  Forms/HDI/                 Splash/startup form (+ BtnDemo.4dm object method for the HDI -> HDI2 transition)
+  Forms/HDI2/                Main demo form: sequential ID buttons + concurrent inventory count
+  Methods/                   Storage/shared-object logic (GetNextID, Inventory, HowMany, DisplayResult) and startup (00_Start)
+  TableForms/                Input/Output list forms for the [SAMPLES] table
+  styleSheets.css            Cross-platform dark mode (prefers-color-scheme) rules
+  styleSheets_mac.css        macOS Liquid Glass / mac-classic button sizing
+  styleSheets_windows.css    Windows-specific rules
+Resources/
+  en.lproj/, ja.lproj/       XLIFF localisation (menu, HDI, HDI2, messages, TableForms)
 ```
+
+## Modernization
+
+This project has been modernized from its original 4D v16 R6 patterns to current 4D language and UI conventions:
+
+- **Localisation** -- every hardcoded menu title, form label, and alert/message string has been replaced with `:xliff:` references or `Localized string(...)` calls. Translations are grouped by purpose (`menuEN/JA.xlf`, `HDIEN/JA.xlf`, `HDI2EN/JA.xlf`, `messagesEN/JA.xlf`, `TableFormsEN/JA.xlf`) under `Resources/en.lproj/` and `Resources/ja.lproj/`.
+- **Modern variable syntax** -- all deprecated `C_LONGINT`/`C_TEXT`/`C_OBJECT`/etc. directives have been converted to `var` declarations and `#DECLARE` parameter/return syntax, including `Compiler_Variables.4dm` and `Compiler_Methods.4dm`.
+- **Standard menu actions** -- menu items that only wrapped a single built-in command use the `"action"` property in `menus.json` instead of a project method.
+- **Method visibility** -- subroutines, form-dependent methods, and callback/object methods are marked `"invisible":true` so they no longer clutter the Run > Method... dialog; `00_Start` (the menu entry point) remains visible.
+- **Startup dialog pattern** -- `00_Start.4dm` uses `#DECLARE`, `CALL WORKER` (instead of `New process`) to reach the application process, non-blocking `DIALOG(...;*)`, and window-reuse detection so re-running it brings the existing splash window to front instead of opening a duplicate.
+- **Dark mode & Liquid Glass** -- `styleSheets.css` uses `"automatic"`/`"automaticAlternate"` colors and `prefers-color-scheme` media queries throughout both forms; `styleSheets_mac.css` sizes every button for both the Liquid Glass (27px) and classic (23px) macOS themes.
+- **Listboxes** -- the project contains no listbox objects, so the `truncateMode`/`resizingMode` listbox-default conventions do not apply here.
 
 ## References
 
@@ -56,4 +74,8 @@ Resources/        Application resources (tips, images)
 - `New process`: https://developer.4d.com/docs/commands/new-process
 - `CALL FORM`: https://developer.4d.com/docs/commands/call-form
 - `OB Copy`: https://developer.4d.com/docs/commands/ob-copy
+- `Localized string`: https://developer.4d.com/docs/commands/localized-string
+- `#DECLARE`: https://developer.4d.com/docs/Concepts/parameters#declaring-parameters
+- `CALL WORKER`: https://developer.4d.com/docs/commands/call-worker
+- CSS in 4D (dark mode, Liquid Glass): https://developer.4d.com/docs/FormEditor/stylesheets
 - Index of v16/v17 HDIs: [miyako/4d-hdi](https://github.com/miyako/4d-hdi)
