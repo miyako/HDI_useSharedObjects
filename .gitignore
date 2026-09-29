@@ -8,6 +8,7 @@ userPreferences.*
 
 # 4D derived/cache
 Project/DerivedData/
+Libraries/
 
 # Documentation (auto-generated)
 Documentation/
