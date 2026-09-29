@@ -1,5 +1,4 @@
-C_TEXT:C284(Tutorial)
-
+//%attributes = {"invisible":true}
 Case of 
 	: (Form event code:C388=On Load:K2:1)
 		

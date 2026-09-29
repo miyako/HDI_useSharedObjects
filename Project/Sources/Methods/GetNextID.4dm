@@ -1,11 +1,5 @@
-//%attributes = {}
-C_TEXT:C284($1)
-C_LONGINT:C283($0)
-
-C_TEXT:C284($idFor)
-C_OBJECT:C1216(objCounters)
-
-$idFor:=$1
+//%attributes = {"invisible":true}
+#DECLARE($idFor : Text)->$result : Integer
 
 If (btnTrace)
 	TRACE:C157
@@ -30,7 +24,7 @@ Use (objCounters)
 	End if 
 	
 	objCounters[$idFor]:=objCounters[$idFor]+1
-	$0:=objCounters[$idFor]
+	$result:=objCounters[$idFor]
 	
 End use 
 

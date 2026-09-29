@@ -1,6 +1,3 @@
+//%attributes = {"invisible":true}
 
 Inventory
-
-
-
-

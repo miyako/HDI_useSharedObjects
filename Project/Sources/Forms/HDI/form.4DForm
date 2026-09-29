@@ -29,6 +29,7 @@
 					"height": 560,
 					"sizingX": "grow",
 					"sizingY": "grow",
+					"fill": "automatic",
 					"stroke": "transparent"
 				},
 				"Rectangle": {
@@ -37,7 +38,7 @@
 					"left": 0,
 					"width": 724,
 					"height": 364,
-					"fill": "#C0C0C0",
+					"class": "hdi-panel-bg",
 					"stroke": "transparent"
 				}
 			}
@@ -49,13 +50,13 @@
 					"top": 520,
 					"left": 614,
 					"width": 90,
-					"height": 20,
 					"action": "Accept",
 					"shortcutKey": "[Return]",
-					"text": "Demo",
-					"class": "default1",
+					"text": ":xliff:HDI_BtnDemo",
+					"class": "default",
 					"focusable": false,
 					"defaultButton": true,
+					"method": "ObjectMethods/BtnDemo.4dm",
 					"events": [
 						"onClick"
 					]
@@ -84,8 +85,8 @@
 					"left": 130,
 					"width": 300,
 					"height": 17,
-					"stroke": "#696969",
-					"text": "{version} and above"
+					"stroke": "automatic",
+					"text": ":xliff:HDI_VersionTemplate"
 				},
 				"labelVersion": {
 					"type": "text",
@@ -93,10 +94,10 @@
 					"left": 20,
 					"width": 100,
 					"height": 17,
-					"stroke": "#212121",
+					"stroke": "automatic",
 					"textAlign": "right",
 					"fontWeight": "bold",
-					"text": "Version:"
+					"text": ":xliff:HDI_LabelVersion"
 				},
 				"labelBlog": {
 					"type": "text",
@@ -104,10 +105,10 @@
 					"left": 20,
 					"width": 100,
 					"height": 17,
-					"stroke": "#212121",
+					"stroke": "automatic",
 					"textAlign": "right",
 					"fontWeight": "bold",
-					"text": "Blog:"
+					"text": ":xliff:HDI_LabelBlog"
 				},
 				"labelInfo": {
 					"type": "text",
@@ -115,10 +116,10 @@
 					"left": 20,
 					"width": 100,
 					"height": 17,
-					"stroke": "#212121",
+					"stroke": "automatic",
 					"textAlign": "right",
 					"fontWeight": "bold",
-					"text": "Info:"
+					"text": ":xliff:HDI_LabelInfo"
 				},
 				"txtBlog": {
 					"type": "input",
@@ -127,7 +128,7 @@
 					"width": 300,
 					"height": 17,
 					"dataSource": "Form:C1466.blog",
-					"stroke": "#1E90FF",
+					"class": "hdi-link",
 					"textDecoration": "underline",
 					"focusable": false,
 					"fill": "transparent",
@@ -147,7 +148,7 @@
 					"width": 300,
 					"height": 17,
 					"dataSource": "Form:C1466.info",
-					"stroke": "#696969",
+					"stroke": "automatic",
 					"focusable": false,
 					"fill": "transparent",
 					"borderStyle": "none",
@@ -173,11 +174,11 @@
 					"left": 160,
 					"width": 544,
 					"height": 50,
-					"stroke": "#212121",
+					"stroke": "automatic",
 					"textAlign": "left",
 					"fontFamily": "System Font",
 					"fontSize": 18,
-					"text": "• title •"
+					"text": ":xliff:HDI_TxtTitlePlaceholder"
 				},
 				"Text": {
 					"type": "text",
@@ -185,11 +186,11 @@
 					"left": 160,
 					"width": 544,
 					"height": 37,
-					"stroke": "#212121",
+					"stroke": "automatic",
 					"textAlign": "left",
 					"fontFamily": "System Font",
 					"fontSize": 30,
-					"text": "How do I…"
+					"text": ":xliff:HDI_Heading"
 				},
 				"White90": {
 					"type": "picture",
@@ -208,9 +209,10 @@
 					"width": 460,
 					"height": 80,
 					"visibility": "hidden",
+					"stroke": "automatic",
 					"textAlign": "center",
 					"fontTheme": "main",
-					"text": "Sorry, this \"How do I\" (HDI) example must\rbe used with a newer version of 4D\r({version} and above)"
+					"text": ":xliff:HDI_ErrorVersionMain"
 				},
 				"ErrorSubText": {
 					"type": "text",
@@ -219,8 +221,9 @@
 					"width": 360,
 					"height": 80,
 					"visibility": "hidden",
+					"stroke": "automatic",
 					"textAlign": "center",
-					"text": "Do not attempt to open this HDI in design mode using this version; if you do so, forms and/or methods could be altered because of missing functionality."
+					"text": ":xliff:HDI_ErrorVersionSub"
 				}
 			}
 		}

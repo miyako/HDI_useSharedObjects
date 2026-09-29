@@ -1,9 +1,5 @@
-//%attributes = {}
-
-C_OBJECT:C1216($1)
-C_OBJECT:C1216($inventory)
-
-$inventory:=$1
+//%attributes = {"invisible":true}
+#DECLARE($inventory : Object)
 
 If (btnTrace)
 	TRACE:C157

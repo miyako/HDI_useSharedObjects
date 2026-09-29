@@ -1,10 +1,11 @@
 //%attributes = {}
-C_LONGINT:C283($1)
-C_LONGINT:C283($ps; $win)
-C_OBJECT:C1216($options)
-C_TEXT:C284($cr)
+#DECLARE($params : Object)
+
+var $splashWindowTitle : Text
+$splashWindowTitle:=""
 
 Case of 
+	
 	: (Count parameters:C259=0)
 		
 		var $dataClass; $project; $path : Text
@@ -18,18 +19,27 @@ Case of
 			End if 
 		End for each 
 		
-		$ps:=New process:C317(Current method name:C684; 0; Current method name:C684; 0)
+		ARRAY LONGINT($windowIDs; 0)
+		WINDOW LIST($windowIDs)
+		
+		var $i; $window : Integer
+		For ($i; 1; Size of array:C274($windowIDs))
+			$window:=$windowIDs{$i}
+			If (Window process($window)=1) && (Get window title($window)=$splashWindowTitle)
+				var $x; $y; $bottom; $right : Integer
+				GET WINDOW RECT($x; $y; $bottom; $right; $window)
+				CALL FORM:C1391($window; Formula(SET WINDOW RECT($x; $y; $bottom; $right; $window)))
+				return 
+			End if 
+		End for 
+		
+		CALL WORKER(1; Current method name:C684; New object:C1471)
 		
 	Else 
 		
-		$cr:=Char:C90(Carriage return:K15:38)
+		SET MENU BAR(1)
 		
-		If (Shift down:C543)  //  for debug purpose only
-			$win:=Open form window:C675("HDI"; Plain form window:K39:10; Horizontally centered:K39:1; Vertically centered:K39:4)
-		Else 
-			$win:=Open form window:C675("HDI"; Pop up form window:K39:11; Horizontally centered:K39:1; Vertically centered:K39:4)
-		End if 
-		
+		var $options : Object
 		$options:=New object:C1471
 		
 		$options.title:="use shared objects and Storage?"
@@ -39,27 +49,15 @@ Case of
 		
 		$options.minimumVersion:="1660"  // 1660 means 16R6   1601 means 16.1 (do not use !)
 		
-		//$options.license:=4D View license  // IF ANY NEEDED
-		//$options.license:=4D write license  // IF ANY NEEDED
+		//$options.license:=4D View license:K44:4  // IF ANY NEEDED
+		//$options.license:=4D Write license:K44:2  // IF ANY NEEDED
 		
 		// THE BACKGROUND PICTURE IS IN THE RESOURCES : Resources/Images/HDIabout.png
 		// the picture size is 724 * 364
-		// these 3 commented lines should be removed when done !
 		
-		DIALOG:C40("HDI"; $options)
-		CLOSE WINDOW:C154
-		
-		
-		If ($options.quit=True:C214)
-			QUIT 4D:C291
-		Else 
-			
-			READ ONLY:C145([SAMPLES:4])
-			$win:=Open form window:C675("HDI2"; Plain form window:K39:10; Horizontally centered:K39:1; Vertically centered:K39:4)
-			DIALOG:C40("HDI2")
-			CLOSE WINDOW:C154
-			
-		End if 
+		$window:=Open form window:C675("HDI"; Plain form window:K39:10; Horizontally centered:K39:1; Vertically centered:K39:4)
+		SET WINDOW TITLE($splashWindowTitle; $window)
+		DIALOG:C40("HDI"; $options; *)
 		
 End case 
 

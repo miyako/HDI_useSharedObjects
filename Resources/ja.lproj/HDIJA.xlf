@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+	<file datatype="plaintext" original="Sources" source-language="en" target-language="ja">
+		<body>
+		<trans-unit id="HDI_BtnDemo" resname="HDI_BtnDemo">
+			<source>Demo</source>
+			<target>デモ</target>
+		</trans-unit>
+		<trans-unit id="HDI_LabelVersion" resname="HDI_LabelVersion">
+			<source>Version:</source>
+			<target>バージョン:</target>
+		</trans-unit>
+		<trans-unit id="HDI_LabelBlog" resname="HDI_LabelBlog">
+			<source>Blog:</source>
+			<target>ブログ:</target>
+		</trans-unit>
+		<trans-unit id="HDI_LabelInfo" resname="HDI_LabelInfo">
+			<source>Info:</source>
+			<target>情報:</target>
+		</trans-unit>
+		<trans-unit id="HDI_TxtTitlePlaceholder" resname="HDI_TxtTitlePlaceholder">
+			<source>• title •</source>
+			<target>• タイトル •</target>
+		</trans-unit>
+		<trans-unit id="HDI_Heading" resname="HDI_Heading">
+			<source>How do I…</source>
+			<target>How do I…</target>
+		</trans-unit>
+		<trans-unit id="HDI_VersionTemplate" resname="HDI_VersionTemplate">
+			<source>{version} and above</source>
+			<target>{version} 以降</target>
+		</trans-unit>
+		<trans-unit id="HDI_ErrorVersionMain" resname="HDI_ErrorVersionMain">
+			<source>Sorry, this "How do I" (HDI) example must&#13;be used with a newer version of 4D&#13;({version} and above)</source>
+			<target>申し訳ございません。この「How do I」(HDI) サンプルは&#13;新しいバージョンの4Dが必要です&#13;({version} 以降)</target>
+		</trans-unit>
+		<trans-unit id="HDI_ErrorVersionSub" resname="HDI_ErrorVersionSub">
+			<source>Do not attempt to open this HDI in design mode using this version; if you do so, forms and/or methods could be altered because of missing functionality.</source>
+			<target>このバージョンでこのHDIをデザインモードで開かないでください。機能が不足しているため、フォームやメソッドが変更される可能性があります。</target>
+		</trans-unit>
+		<trans-unit id="BtnClose" resname="BtnClose">
+			<source>Close</source>
+			<target>閉じる</target>
+		</trans-unit>
+		<trans-unit id="ErrorViewProMain" resname="ErrorViewProMain">
+			<source>Sorry, this “How do I” (HDI) example demonstrates a 4D View Pro feature.</source>
+			<target>申し訳ございません。この「How do I」(HDI) サンプルは4D View Proの機能を示すものです。</target>
+		</trans-unit>
+		<trans-unit id="ErrorViewProSub" resname="ErrorViewProSub">
+			<source>You must have a valid 4D View Pro license to continue.</source>
+			<target>続行するには有効な4D View Proライセンスが必要です。</target>
+		</trans-unit>
+		<trans-unit id="ErrorWriteProMain" resname="ErrorWriteProMain">
+			<source>Sorry, this “How do I” (HDI) example demonstrates a 4D Write Pro feature.</source>
+			<target>申し訳ございません。この「How do I」(HDI) サンプルは4D Write Proの機能を示すものです。</target>
+		</trans-unit>
+		<trans-unit id="ErrorWriteProSub" resname="ErrorWriteProSub">
+			<source>You must have a valid 4D Write Pro license to continue.</source>
+			<target>続行するには有効な4D Write Proライセンスが必要です。</target>
+		</trans-unit>
+		</body>
+	</file>
+</xliff>

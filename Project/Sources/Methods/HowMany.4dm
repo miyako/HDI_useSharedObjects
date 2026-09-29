@@ -1,17 +1,9 @@
-//%attributes = {}
+//%attributes = {"invisible":true}
+#DECLARE($what : Text; $inventory : Object)
 
-C_TEXT:C284($1)
-C_TEXT:C284($what)
+var $count; $window : Integer
 
-C_OBJECT:C1216($2)
-C_OBJECT:C1216($inventory)
-
-
-$what:=$1
-$inventory:=$2  // copy the reference for code lisibility
-
-
-MESSAGE:C88("counting "+$what)
+MESSAGE:C88(Localized string("MessageCounting")+$what)
 
 // simulate delay of complicated counting
 DELAY PROCESS:C323(Current process:C322; 60+(60*(Random:C100%5)))  // wait for 1 to 5 seconds

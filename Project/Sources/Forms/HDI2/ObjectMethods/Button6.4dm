@@ -1,3 +1,4 @@
+//%attributes = {"invisible":true}
 If (btnTrace)
 	TRACE:C157
 End if 

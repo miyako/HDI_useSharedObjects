@@ -1,16 +1,11 @@
 //%attributes = {"invisible":true}
-C_BOOLEAN:C305(btnTrace)
-C_OBJECT:C1216(CopyOfStorage)
-C_LONGINT:C283(ID1)
-C_LONGINT:C283(ID2)
-C_LONGINT:C283(ID3)
-C_LONGINT:C283(ID4)
-C_LONGINT:C283(ID5)
-C_TEXT:C284(items)
-C_OBJECT:C1216(objCounter)
-C_OBJECT:C1216(objCounters)
-C_TEXT:C284(result)
-C_TEXT:C284(Tutorial)
-C_TEXT:C284(Var)
-C_TEXT:C284(whom)
-C_OBJECT:C1216(WParea)
+var btnTrace : Boolean
+var CopyOfStorage : Object
+var ID1; ID2; ID3; ID4; ID5 : Integer
+var items : Text
+var objCounter; objCounters : Object
+var result : Text
+var Tutorial : Text
+var Var : Text
+var whom : Text
+var WParea : Object

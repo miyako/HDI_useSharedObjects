@@ -1,12 +1,13 @@
-//%attributes = {}
+//%attributes = {"invisible":true}
 ARRAY TEXT:C222($_items; 0)
 GET TEXT KEYWORDS:C1141(items; $_items; *)
 
+var $window; $nbItems; $i; $ps : Integer
+var $Inventory : Object
 
 $window:=Current form window:C827  // Caller that will need the answer
 $nbItems:=Size of array:C274($_items)
 
-C_OBJECT:C1216($Inventory)
 $Inventory:=New shared object:C1526()  // The shared object where the inventory shall be calculated
 
 If (btnTrace)

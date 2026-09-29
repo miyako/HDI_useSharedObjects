@@ -49,6 +49,7 @@
 					"height": 17,
 					"dataSource": "[SAMPLES:4]ID:1",
 					"dataSourceTypeHint": "integer",
+					"stroke": "automatic",
 					"textAlign": "left",
 					"focusable": false,
 					"fill": "transparent",
@@ -76,8 +77,9 @@
 					"width": 64,
 					"height": 17,
 					"dataSource": "[SAMPLES:4]Page:4",
+					"stroke": "automatic",
 					"textAlign": "left",
-					"fill": "#FFFFFF",
+					"fill": "automatic",
 					"borderStyle": "sunken",
 					"contextMenu": "none",
 					"dragging": "none",
@@ -102,8 +104,9 @@
 					"height": 17,
 					"sizingX": "grow",
 					"dataSource": "[SAMPLES:4]Title:2",
+					"stroke": "automatic",
 					"textAlign": "left",
-					"fill": "#FFFFFF",
+					"fill": "automatic",
 					"borderStyle": "sunken",
 					"contextMenu": "none",
 					"multiline": "no",
@@ -131,8 +134,9 @@
 					"sizingX": "grow",
 					"sizingY": "grow",
 					"dataSource": "[SAMPLES:4]Tutorial:3",
+					"stroke": "automatic",
 					"textAlign": "left",
-					"fill": "#FFFFFF",
+					"fill": "automatic",
 					"borderStyle": "sunken",
 					"styledText": true,
 					"allowFontColorPicker": true,
@@ -297,8 +301,9 @@
 					"left": 24,
 					"width": 86,
 					"height": 17,
+					"stroke": "automatic",
 					"textAlign": "right",
-					"text": "ID : "
+					"text": ":xliff:TableForms_LabelID"
 				},
 				"Text10": {
 					"type": "text",
@@ -306,8 +311,9 @@
 					"left": 24,
 					"width": 86,
 					"height": 17,
+					"stroke": "automatic",
 					"textAlign": "right",
-					"text": "Title : "
+					"text": ":xliff:TableForms_LabelTitle"
 				},
 				"Text11": {
 					"type": "text",
@@ -315,8 +321,9 @@
 					"left": 24,
 					"width": 86,
 					"height": 17,
+					"stroke": "automatic",
 					"textAlign": "right",
-					"text": "Text : "
+					"text": ":xliff:TableForms_LabelText"
 				},
 				"Text12": {
 					"type": "text",
@@ -324,8 +331,9 @@
 					"left": 24,
 					"width": 86,
 					"height": 17,
+					"stroke": "automatic",
 					"textAlign": "right",
-					"text": "Page:"
+					"text": ":xliff:TableForms_LabelPage"
 				}
 			}
 		}
